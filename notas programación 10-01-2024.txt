@@ -1,0 +1,49 @@
+un programa que: recibe un nombre de usuario y una contraseña y devuelve un booleano verdadero si el nombre y la contraseña son correctas y falso si no lo son. tambien un contador que cuente los intentos que debe incrementarse con un limite de 3 intentos
+
+
+nombre de usuario = usuario 1
+contraseña = asdfg
+
+
+
+main{	
+	//declaramos las variables y guardamos los valores por defecto
+	boolean login = false;
+	String nombreDeUsuario = 'usuario1';
+	String contraseña = 'asdfg';
+	
+	//llamamos a la funcion que va a verificar los datos
+	logear(login, nombreDeUsuario, contraseña);
+	
+}
+
+//funcion booleana que devolverá si se ha verificado la informacion
+static bool logear(boolean login){
+	int intentos = 0;	
+	login = false;
+	print('Nombre de usuario?');
+	String username = input();
+	print('introduzca su contraseña)
+	String password = input();
+
+	for(int i = 0; i <=3; i++){
+		if(User == username && pass == password){
+			login = true;
+			break;
+		}
+		if (User != username && pass != password){
+			login = false
+			print("Usuario o contraseña incorrectos, vuelva a intentarlo");	
+			username = input();
+			password = input();
+			intentos++;
+		}
+			if(User != username && pass !=password && intentos == 3){
+				print("pongase en contacto con el administrador");
+		}	
+		
+	}
+	return login;
+
+
+}
